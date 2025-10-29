@@ -9,6 +9,7 @@
     "onInstall": "This package requires an Nvidia GPU with CUDA support."
   },
   "architectures": [
+    "linux/amd64",
     "linux/arm64"
   ]
 }
