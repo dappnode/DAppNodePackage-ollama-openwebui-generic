@@ -24,9 +24,6 @@ services:
       - "11434:11434/tcp"
     volumes:
       - "ollama:/root/.ollama"
-    devices:
-      - /dev/kfd
-      - /dev/dri
     restart: unless-stopped
     # -------------------------------------------------
     #   👉  Added environment variables for logging &
