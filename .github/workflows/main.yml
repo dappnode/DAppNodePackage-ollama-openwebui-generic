@@ -1,0 +1,33 @@
+name: "Main"
+on:
+  pull_request:
+  push:
+    branches:
+      - "main"
+      - "master"
+      - "v[0-9]+.[0-9]+.[0-9]+"
+    paths-ignore:
+      - "README.md"
+
+jobs:
+
+  # e2e-test:
+  #   runs-on: mainnet
+  #   needs: build-test
+  #   if: github.event_name != 'push'
+  #   name: End to end tests
+  #   steps:
+  #     - uses: actions/checkout@v4
+  #     - run: npx @dappnode/dappnodesdk@latest github-action test-end-to-end --errorLogsTimeout 120 --healthCheckUrl http://beacon-chain.prysm.dappnode:3500/eth/v1/beacon/genesis --network mainnet --environmentByService="{\"beacon-chain\":{\"CHECKPOINT_SYNC_URL\":\"https://checkpoint-sync.dappnode.io\"}}"
+
+  release:
+    name: Release
+    runs-on: ipfs-dev-gateway
+    if: github.event_name == 'push'
+    steps:
+      - uses: actions/checkout@v4
+      - name: Publish
+        run: npx @dappnode/dappnodesdk publish patch --content_provider=http://10.200.200.7:5001 --dappnode_team_preset --all-variants
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          DEVELOPER_ADDRESS: "0xf35960302a07022aba880dffaec2fdd64d5bf1c1"
