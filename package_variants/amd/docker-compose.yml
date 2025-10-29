@@ -13,7 +13,7 @@ services:
       context: ollama
       args:
         OLLAMA_VERSION: rocm
-      devices:
-        - /dev/kfd
-        - /dev/dri
+    devices:
+      - /dev/kfd
+      - /dev/dri
     container_name: ollama-amd.ollama-openwebui.public.dappnode.eth
