@@ -8,10 +8,6 @@ services:
         WEBUI_VERSION: main
     container_name: openwebui-nvidia.ollama-openwebui.public.dappnode.eth
   ollama:
-    build:
-      context: ollama
-      args:
-        OLLAMA_VERSION: 0.12.6
     deploy:
       resources:
         reservations:
@@ -19,4 +15,8 @@ services:
             - driver: nvidia
               count: all
               capabilities: [ gpu ]
+    build:
+      context: ollama
+      args:
+        OLLAMA_VERSION: 0.12.6
     container_name: ollama-nvidia.ollama-openwebui.public.dappnode.eth
