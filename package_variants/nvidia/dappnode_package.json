@@ -5,11 +5,10 @@
     "homepage": "https://github.com/open-webui/open-webui",
     "ui": "http://ollama-nvidia-openwebui.public.dappnode:8080"
   },
-  "architectures": [
-    "linux/amd64",
-    "linux/arm64"
-  ],
   "warnings": {
     "onInstall": "This package requires an Nvidia GPU with CUDA support."
-  }
+  },
+  "architectures": [
+    "linux/arm64"
+  ]
 }
