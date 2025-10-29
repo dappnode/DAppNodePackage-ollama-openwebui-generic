@@ -1,0 +1,19 @@
+version: "3.5"
+
+services:
+  webui:
+    build:
+      context: webui
+      args:
+        WEBUI_VERSION: main
+    container_name: openwebui-amd.ollama-openwebui.public.dappnode.eth
+
+  ollama:
+    build:
+      context: ollama
+      args:
+        OLLAMA_VERSION: rocm
+      devices:
+        - /dev/kfd
+        - /dev/dri
+    container_name: ollama-amd.ollama-openwebui.public.dappnode.eth

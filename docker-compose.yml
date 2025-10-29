@@ -1,0 +1,51 @@
+version: "3.5"
+
+services:
+  webui:
+    build:
+      context: webui
+    container_name: openwebui.ollama-openwebui.public.dappnode.eth
+    ports:
+      - "8080:8080/tcp"
+    environment:
+      OLLAMA_BASE_URL: "http://ollama:11434"
+      WEBUI_AUTH: "true"
+    volumes:
+      - "webui:/app/backend/data"
+    restart: unless-stopped
+    depends_on:
+      - ollama
+
+  ollama:
+    build:
+      context: ollama
+    container_name: ollama.ollama-openwebui.public.dappnode.eth
+    ports:
+      - "11434:11434/tcp"
+    volumes:
+      - "ollama:/root/.ollama"
+    devices:
+      - /dev/kfd
+      - /dev/dri
+    restart: unless-stopped
+    # -------------------------------------------------
+    #   👉  Added environment variables for logging &
+    #      Prometheus‑style metrics
+    # -------------------------------------------------
+    environment:
+      # Show token‑throughput and other debug info in the container logs
+      - OLLAMA_LOG_LEVEL=debug
+
+      # Enable the /metrics endpoint (Prometheus format)
+      - OLLAMA_METRICS=1
+
+      # OPTIONAL – JSON‑formatted logs (easier to ship to Loki/Elastic)
+      - OLLAMA_LOG_FORMAT=json
+
+      # OPTIONAL – Turn off outbound telemetry if you only want local metrics
+      - OLLAMA_TELEMETRY=0
+    # -------------------------------------------------
+
+volumes:
+  ollama: {}
+  webui: {}

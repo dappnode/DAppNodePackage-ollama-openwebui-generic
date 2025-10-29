@@ -1,0 +1,25 @@
+{
+  "name": "ollama-amd-openwebui.public.dappnode.eth",
+  "version": "0.1.0",
+  "upstreamVersion": "ollama:rocm + open-webui:main",
+  "shortDescription": "Local AI chat interface with Ollama and Open WebUI",
+  "description": "Run large language models locally on your DAppNode with GPU acceleration. This package combines Ollama (with AMD ROCm support for GPU inference) and Open WebUI (a ChatGPT-like interface) to provide a complete local AI solution.\n\n**Features:**\n- AMD GPU acceleration via ROCm\n- ChatGPT-like web interface\n- Complete privacy - all processing stays local\n- Support for multiple LLM models (Llama, Mistral, CodeLlama, etc.)\n\n**Requirements:**\n- AMD GPU with ROCm support\n- At least 8GB RAM (16GB+ recommended)\n- Sufficient storage for models (10GB+ recommended)\n\nAccess Open WebUI at http://ollama-openwebui.public.dappnode:8080",
+  "type": "service",
+  "mainService": "webui",
+  "author": "DAppNode Community",
+  "license": "MIT",
+  "categories": [
+    "Developer tools"
+  ],
+  "links": {
+    "homepage": "https://github.com/open-webui/open-webui",
+    "ui": "http://ollama-openwebui.public.dappnode:8080"
+  },
+  "architectures": [
+    "linux/amd64",
+    "linux/arm64"
+  ],
+  "warnings": {
+    "onInstall": "This package requires an AMD GPU with ROCm support. The Ollama service will expose GPU devices /dev/kfd and /dev/dri from the host system."
+  }
+}
