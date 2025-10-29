@@ -7,7 +7,6 @@ services:
       args:
         WEBUI_VERSION: main
     container_name: openwebui-nvidia.ollama-openwebui.public.dappnode.eth
-
   ollama:
     build:
       context: ollama
