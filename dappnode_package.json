@@ -8,13 +8,14 @@
   "author": "DAppNode Community",
   "license": "GPL-3.0",
   "categories": [
-    "Developer tools"
+    "Developer tools",
+    "AI"
   ],
   "links": {
     "homepage": "https://github.com/open-webui/open-webui",
     "ui": "http://ollama-openwebui.public.dappnode:8080"
   },
   "architectures": [
-    "linux/amd64",
+    "linux/amd64"
   ]
 }
