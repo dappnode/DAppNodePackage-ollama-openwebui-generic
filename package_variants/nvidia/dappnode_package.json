@@ -1,9 +1,9 @@
 {
-  "name": "ollama-nvidia-openwebui.public.dappnode.eth",
+  "name": "ollama-nvidia-openwebui.dpn.dappnode.eth",
   "version": "0.1.0",
   "links": {
     "homepage": "https://github.com/open-webui/open-webui",
-    "ui": "http://ollama-nvidia-openwebui.public.dappnode:8080"
+    "ui": "http://ollama-nvidia-openwebui.dappnode:8080"
   },
   "warnings": {
     "onInstall": "This package requires an Nvidia GPU with CUDA support."
