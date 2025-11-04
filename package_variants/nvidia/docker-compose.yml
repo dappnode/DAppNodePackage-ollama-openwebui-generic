@@ -6,7 +6,7 @@ services:
       context: webui
       args:
         WEBUI_VERSION: main
-    container_name: openwebui-nvidia.ollama-openwebui.public.dappnode.eth
+    container_name: openwebui-nvidia.ollama-openwebui.dpn.dappnode.eth
   ollama:
     deploy:
       resources:
@@ -19,4 +19,4 @@ services:
       context: ollama
       args:
         OLLAMA_VERSION: 0.12.6
-    container_name: ollama-nvidia.ollama-openwebui.public.dappnode.eth
+    container_name: ollama-nvidia.ollama-openwebui.dpn.dappnode.eth
