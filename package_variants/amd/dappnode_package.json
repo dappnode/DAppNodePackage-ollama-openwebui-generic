@@ -1,9 +1,9 @@
 {
-  "name": "ollama-amd-openwebui.public.dappnode.eth",
+  "name": "ollama-amd-openwebui.dpn.dappnode.eth",
   "version": "0.1.0",
   "links": {
     "homepage": "https://github.com/open-webui/open-webui",
-    "ui": "http://ollama-openwebui.public.dappnode:8080"
+    "ui": "http://ollama-openwebui.dappnode:8080"
   },
   "warnings": {
     "onInstall": "This package requires an AMD GPU with ROCm support. The Ollama service will expose GPU devices /dev/kfd and /dev/dri from the host system."
