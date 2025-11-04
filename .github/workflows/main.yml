@@ -39,7 +39,7 @@ jobs:
         with:
           node-version: '22'
       - name: Publish
-        run: npx @dappnode/dappnodesdk publish patch --content_provider=http://10.200.200.7:5001 --dappnode_team_preset --all-variants --timeout 2h
+        run: npx @dappnode/dappnodesdk publish patch --content_provider=http://65.108.192.207:5001 --dappnode_team_preset --all-variants --timeout 2h
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           DEVELOPER_ADDRESS: "0xf35960302a07022aba880dffaec2fdd64d5bf1c1"
