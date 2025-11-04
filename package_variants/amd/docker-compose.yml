@@ -6,7 +6,7 @@ services:
       context: webui
       args:
         WEBUI_VERSION: main
-    container_name: openwebui-amd.ollama-openwebui.dpn.dappnode.eth
+    container_name: openwebui-amd.ollama-openwebui.dnp.dappnode.eth
 
   ollama:
     build:
@@ -16,4 +16,4 @@ services:
     devices:
       - /dev/kfd
       - /dev/dri
-    container_name: ollama-amd.ollama-openwebui.dpn.dappnode.eth
+    container_name: ollama-amd.ollama-openwebui.dnp.dappnode.eth
