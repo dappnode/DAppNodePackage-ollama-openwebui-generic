@@ -4,7 +4,7 @@ services:
   webui:
     build:
       context: webui
-    container_name: openwebui.ollama-openwebui.public.dappnode.eth
+    container_name: openwebui.ollama-openwebui.dnp.dappnode.eth
     ports:
       - "8080:8080/tcp"
     environment:
@@ -19,16 +19,12 @@ services:
   ollama:
     build:
       context: ollama
-    container_name: ollama.ollama-openwebui.public.dappnode.eth
+    container_name: ollama.ollama-openwebui.dnp.dappnode.eth
     ports:
       - "11434:11434/tcp"
     volumes:
       - "ollama:/root/.ollama"
     restart: unless-stopped
-    # -------------------------------------------------
-    #   👉  Added environment variables for logging &
-    #      Prometheus‑style metrics
-    # -------------------------------------------------
     environment:
       # Show token‑throughput and other debug info in the container logs
       - OLLAMA_LOG_LEVEL=debug
@@ -41,8 +37,6 @@ services:
 
       # OPTIONAL – Turn off outbound telemetry if you only want local metrics
       - OLLAMA_TELEMETRY=0
-    # -------------------------------------------------
-
 volumes:
   ollama: {}
   webui: {}
