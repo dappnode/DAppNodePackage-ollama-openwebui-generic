@@ -5,7 +5,7 @@ services:
     build:
       context: webui
       args:
-        WEBUI_VERSION: main
+        WEBUI_VERSION: v0.6.34
     container_name: openwebui-amd.ollama-openwebui.dnp.dappnode.eth
 
   ollama:
