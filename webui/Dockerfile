@@ -1,5 +1,5 @@
 # syntax=docker/dockerfile:1
-ARG WEBUI_VERSION
+ARG WEBUI_VERSION=main
 
 FROM ghcr.io/open-webui/open-webui:${WEBUI_VERSION}
 
