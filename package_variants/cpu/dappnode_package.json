@@ -1,0 +1,12 @@
+{
+  "name": "ollama-cpu-openwebui.dnp.dappnode.eth",
+  "version": "0.1.0",
+  "links": {
+    "ui": "http://ollama-cpu-openwebui.dappnode:8080"
+  },
+  "architectures": [
+    "linux/amd64",
+    "linux/arm64"
+  ],
+  "description": "Run large language models locally on your DAppNode. This package combines Ollama and Open WebUI (a ChatGPT-like interface) to provide a complete local AI solution.\n\n**Features:**\n- CPU acceleration for inference\n- ChatGPT-like web interface\n- Complete privacy - all processing stays local\n- Support for multiple LLM models (Llama, Mistral, CodeLlama, etc.)\n\n**Requirements:**\n- At least 8GB RAM (16GB+ recommended)\n- Sufficient storage for models (10GB+ recommended)\n"
+}
