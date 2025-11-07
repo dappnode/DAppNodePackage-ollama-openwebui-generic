@@ -5,8 +5,6 @@ services:
     build:
       context: webui
     container_name: openwebui.ollama-openwebui.dnp.dappnode.eth
-    ports:
-      - "8080:8080/tcp"
     environment:
       OLLAMA_BASE_URL: "http://ollama:11434"
       WEBUI_AUTH: "true"
