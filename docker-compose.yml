@@ -20,8 +20,6 @@ services:
     build:
       context: ollama
     container_name: ollama.ollama-openwebui.dnp.dappnode.eth
-    ports:
-      - "11434:11434/tcp"
     volumes:
       - "ollama:/root/.ollama"
     restart: unless-stopped
