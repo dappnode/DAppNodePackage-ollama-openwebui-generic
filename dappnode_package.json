@@ -4,12 +4,12 @@
   "upstream": [
     {
       "repo": "ollama/ollama",
-      "version": "v0.12.9",
+      "version": "v0.13.2",
       "arg": "OLLAMA_VERSION"
     },
     {
       "repo": "open-webui/open-webui",
-      "version": "v0.6.34",
+      "version": "v0.6.41",
       "arg": "WEBUI_VERSION"
     }
   ],
@@ -19,13 +19,9 @@
   "mainService": "webui",
   "author": "DAppNode Association <admin@dappnode.io> (https://github.com/dappnode)",
   "license": "GPL-3.0",
-  "categories": [
-    "AI"
-  ],
+  "categories": ["AI"],
   "links": {
     "ui": "http://ollama-openwebui.dappnode:8080"
   },
-  "architectures": [
-    "linux/amd64"
-  ]
+  "architectures": ["linux/amd64"]
 }
