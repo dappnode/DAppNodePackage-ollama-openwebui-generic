@@ -9,7 +9,7 @@
     },
     {
       "repo": "open-webui/open-webui",
-      "version": "v0.6.43",
+      "version": "v0.7.1",
       "arg": "WEBUI_VERSION"
     }
   ],
