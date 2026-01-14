@@ -4,12 +4,12 @@
   "upstream": [
     {
       "repo": "ollama/ollama",
-      "version": "v0.13.5",
+      "version": "v0.14.1",
       "arg": "OLLAMA_VERSION"
     },
     {
       "repo": "open-webui/open-webui",
-      "version": "v0.6.43",
+      "version": "v0.7.2",
       "arg": "WEBUI_VERSION"
     }
   ],
