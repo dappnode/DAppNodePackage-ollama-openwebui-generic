@@ -18,5 +18,5 @@ services:
     build:
       context: ollama
       args:
-        OLLAMA_VERSION: 0.12.6
+        OLLAMA_VERSION: 0.15.1
     container_name: ollama-nvidia.ollama-openwebui.dnp.dappnode.eth
