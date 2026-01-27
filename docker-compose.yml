@@ -24,6 +24,7 @@ services:
       - OLLAMA_METRICS=1
       - OLLAMA_LOG_FORMAT=json
       - OLLAMA_TELEMETRY=0
+      - OLLAMA_CONTEXT_LENGTH=64000
 volumes:
   ollama: {}
   webui: {}
