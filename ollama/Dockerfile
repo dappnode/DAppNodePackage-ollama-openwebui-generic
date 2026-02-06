@@ -1,7 +1,7 @@
 # syntax=docker/dockerfile:1
 ARG OLLAMA_VERSION
 
-FROM ollama/ollama:${OLLAMA_VERSION}
+FROM ollama/ollama:${OLLAMA_VERSION#v}
 
 # Create data directory
 RUN mkdir -p /root/.ollama
