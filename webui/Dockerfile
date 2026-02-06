@@ -1,7 +1,7 @@
 # syntax=docker/dockerfile:1
 ARG WEBUI_VERSION=main
 
-FROM ghcr.io/open-webui/open-webui:${WEBUI_VERSION}
+FROM ghcr.io/open-webui/open-webui:${WEBUI_VERSION#v}
 
 # Create data directory
 RUN mkdir -p /app/backend/data
