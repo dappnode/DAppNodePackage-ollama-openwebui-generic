@@ -4,7 +4,7 @@ services:
     build:
       context: webui
       args:
-        WEBUI_VERSION: v0.8.5
+        WEBUI_VERSION: v0.8.6
     container_name: openwebui.ollama-openwebui.dnp.dappnode.eth
     environment:
       OLLAMA_BASE_URL: http://ollama:11434
@@ -18,7 +18,7 @@ services:
     build:
       context: ollama
       args:
-        OLLAMA_VERSION: v0.15.5
+        OLLAMA_VERSION: v0.17.4
     container_name: ollama.ollama-openwebui.dnp.dappnode.eth
     volumes:
       - ollama:/root/.ollama
