@@ -4,7 +4,7 @@
   "upstream": [
     {
       "repo": "ollama/ollama",
-      "version": "v0.20.4",
+      "version": "v0.20.5",
       "arg": "OLLAMA_VERSION"
     },
     {
